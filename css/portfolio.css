@@ -1,0 +1,174 @@
+
+.modal {
+    background-color:#96BB7C;
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+    padding: 9px 10px;
+    border: 2px solid black;
+    border-radius: 35px;
+    transition: transform .4s;
+    margin: 3em;
+    max-width: 30%;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  .md-overlay{
+    background: hsl(41, 92%, 75%, 0.2);
+    position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	transition: all 0.3s;
+
+  }
+  .md-modal:target ~ .md-overlay {
+      opacity: 1;
+      visibility: visible;
+  }
+  .modal:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px rgb(41, 41, 41);
+  }
+  .md-close{
+    text-decoration: underline;
+    color: #FAD586;
+    padding-top: 1em;
+    text-shadow: 1px 1px 1px rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+  }
+  .md-close:hover{
+    text-shadow: none;
+  }
+  .md-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      max-width: 630px;
+      min-width: 320px;
+      height: auto;
+      z-index: 2000;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .md-modal:target {
+      visibility: visible;
+  }
+  
+  /* Content styles */
+  .md-content {
+      color: rgb(0, 0, 0);
+      background-color: #96BB7C;
+      position: relative;
+      border-radius: 3px;
+      margin: 0 auto;
+      box-shadow: 10px 10px 30px rgb(41, 41, 41);
+  }
+  
+  .md-content h3 {
+      margin: 0;
+      padding: 0.4em;
+      text-align: center;
+      font-size: 2.4em;
+      font-weight: 300;
+      opacity: 0.8;
+      background: rgba(0,0,0,0.1);
+      border-radius: 3px 3px 0 0;
+  }
+  
+  .md-content > div {
+      padding: 15px 40px 30px;
+      margin: 0;
+      font-weight: 300;
+      font-size: 1.15em;
+  }
+  
+  .md-content > div p {
+      margin: 0;
+      padding: 10px 0;
+  }
+  /* Effect */
+  
+  .md-modal .md-content {
+      -webkit-transform: scale(0.7);
+      -moz-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transform: scale(0.7);
+      opacity: 0;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  .md-modal:target .md-content {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+  }
+
+  .flower-img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  .portfolio-project{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 0.1em;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+  .portfolio-columns{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+.portfolio-row{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.portfolio-text{
+    text-align: center;
+    font-weight: bold;
+}
+.gitHub{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: #D6EFC7;
+    border: 2px solid #FAD586;
+    border-radius: 6px;
+}
+.gitHub:hover{
+    box-shadow: 2px 2px 3px rgb(44, 43, 43);
+    transform: scale(1.05);
+    transition: transform .5s;
+}
+@media only screen and (max-width: 600px) {
+    .portfolio-columns {
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolio-row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .portfolio-project{
+        width: 60%;
+    }
+    
+}

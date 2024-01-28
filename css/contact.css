@@ -1,0 +1,45 @@
+/* contact me */
+form{
+    width: 50%;
+    margin: 1em;
+    padding: 2em;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #96BB7C;
+
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label{
+    display: block;
+
+}
+input[type=submit]{
+    width: 50%;
+    background-color:#FAD586;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 35px;
+    transition: transform .4s;
+}
+input[type=submit]:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 2px rgb(41, 41, 41);
+}
+
+
+@media only screen and (max-width: 600px) {
+    form{
+        width: 90%;
+    }
+}
